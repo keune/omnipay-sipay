@@ -1,0 +1,32 @@
+{
+    "name": "keune/omnipay-sipay",
+    "type": "library",
+    "require": {
+        "ext-json": "*",
+        "ext-openssl": "*",
+        "omnipay/common": "^3.4",
+        "symfony/http-client": "^7.3",
+        "php-http/httplug": "^2.4",
+        "nyholm/psr7": "^1.8"
+    },
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Keune\\OmnipaySipay\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "ahmet",
+            "email": "ahmetkun@gmail.com"
+        }
+    ],
+    "config": {
+        "allow-plugins": {
+            "php-http/discovery": true
+        }
+    },
+    "require-dev": {
+        "friendsofphp/php-cs-fixer": "^3.85"
+    }
+}
