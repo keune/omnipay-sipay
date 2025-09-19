@@ -85,11 +85,8 @@ class ThreeDSecureInitRequest extends AbstractSipayRequest
             'return_url' => $this->getReturnUrl(),
             'cancel_url' => $this->getCancelUrl(),
             'hash_key' => $hashKey,
+            'payment_completed_by' => 'merchant',
         ];
-
-        if (!$this->getTestMode()) {
-            $formData['payment_completed_by'] = 'merchant'; // seems to cause problems on their test environment
-        }
 
         if ($this->getClientIp()) {
             $formData['ip'] = $this->getClientIp();
